@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-<canvas id="bezierCanvas" width="400" height="400"></canvas>
+<canvas id="bezierCanvas" width="500" height="500"></canvas>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -39,11 +39,13 @@
 
     // Draw Bézier curve
     ctx.strokeStyle = "black";
+    ctx.fillStyle = "transparent"; // Set fill style to transparent
     ctx.beginPath();
     ctx.moveTo(p0[0], p0[1]);
     ctx.bezierCurveTo(p1[0], p1[1], p2[0], p2[1], p3[0], p3[1]);
-    ctx.stroke();
+    ctx.stroke(); // Draw outline of the curve
   });
 </script>
 </body>
 </html>
+
